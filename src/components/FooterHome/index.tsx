@@ -21,7 +21,7 @@ return () => {
                     <div data-aos="fade-left" data-aos-duration="2500" className="h-[1px] w-1/3 bg-gradient-to-l from-[#a6ff00] to-transparent rounded-full"></div>
                 </div>
 
-                <div className="relative z-10">
+                <div className="relative z-10 p-5">
                     <h2 data-aos="fade-up" data-aos-duration="2400" className="text-4xl font-medium mb-4 text-[#ffffffcb] leading-15">
                     Sabe o que é ainda mais legal? A plataforma é<br />
                     totalmente <span className="text-[#a6ff00]">grátis!</span>

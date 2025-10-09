@@ -27,13 +27,13 @@ useEffect(() => {
         <section className="w-screen min-h-screen bg-[#000] relative">
             <section className="relative z-10 flex justify-center top-60 right-5.5 p-5 flex-col items-center">
                 <div className="max-w-4xl flex flex-col justify-center items-center">
-                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#ffffffcb] text-6xl lg:text-7xl text-center font-medium ml-6">Controle seus envios de maneira rápida e eficiente</h1>
-                    <p data-aos="fade-up" data-aos-duration="2200" className="text-[#A1A1AA] text-2xl max-w-3xl ml-15 mt-8 text-center mr-15">
+                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#ffffffcb] text-6xl lg:text-7xl text-center max-sm:text-left font-medium ml-6 max-sm:ml-15">Controle seus envios de maneira rápida e eficiente</h1>
+                    <p data-aos="fade-up" data-aos-duration="2200" className="text-[#A1A1AA] text-2xl max-w-3xl ml-15 mt-8 lg:text-center mr-15">
                         Agora você consegue gerenciar seus processos logísticos de 
                         maneira rápida, eficiente e totalmente otimizada para o seu negócio. A <span className="font-bold">Trackys</span> conta com diversas ferramentas
                         que ajudam você a resolver problemas logísticos.
                     </p>
-                        <div data-aos="fade-up" data-aos-duration="2100" className="flex items-center justify-center flex-col">
+                        <div data-aos="fade-up" data-aos-duration="2100" className="flex items-center justify-center flex-col ml-12">
                             <button className="cursor-pointer text-[#a6ff00af] text-lg duration-700 ease-in-out mt-10 hover:text-[#a6ff00] hover:scale-110 hover:mb-2" onClick={() => scrollToSection("about")}>Saber mais</button>
                             <FaArrowDown className="text-[#a6ff00af] mt-5"/>
                         </div>
@@ -51,7 +51,7 @@ useEffect(() => {
         <section id="about" className="w-full items-center flex justify-center mb-50 p-8">
         <div className="flex flex-wrap max-w-6xl w-full gap-10">
             <div data-aos="zoom-in-up" data-aos-duration="2300" className="flex-1 min-w-[350px]">
-            <h2 className="text-[#ffffffdc] text-4xl md:text-5xl lg:text-5xl font-medium leading-15 relative text-center">
+            <h2 className="text-[#ffffffdc] text-4xl md:text-5xl lg:text-5xl font-medium leading-15 relative lg:text-center">
                 Quer ter total controle sobre suas entregas? Vamos juntos
             </h2>
             <div className=" relative hover:scale-110 duration-700 ease-in-out hidden lg:block mt-5">
@@ -61,7 +61,7 @@ useEffect(() => {
             </div>
 
             <div data-aos="zoom-in-up" data-aos-duration="2200" className="flex-1 min-w-[350px] max-md:m-auto">
-            <p className="text-[#A1A1AA] max-w-lg text-lg leading-8 text-center min-md:ml-25">
+            <p className="text-[#A1A1AA] max-w-lg text-lg leading-8 lg:text-center min-md:ml-25">
                 A <span className="font-bold text-[#a6ff00af]">Trackys</span> conta com uma solução completa de gestão de entregas terceirizadas, projetada para otimizar operações e melhorar a experiência do cliente.
                 O sistema permite <strong>monitorar prazos</strong>, <strong>prevenir atrasos</strong>, <strong>gerenciar custos</strong> e <strong>acompanhar o status de cada entrega</strong> até a confirmação do recebimento.
             </p>
