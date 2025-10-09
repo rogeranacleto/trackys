@@ -20,7 +20,7 @@ useEffect(() => {
                     <h1 className="text-white text-3xl text-center mb-3.5">Bem vindo à <span className="text-[#a6ff00]">Trackys</span></h1>
                     <p className="text-gray-100/60 mb-4.5 text-center">Insira seu e-mail e senha, para começar a usar o sistema.</p>
                     <label className="text-white mb-2">Email</label>
-                    <MdOutlineMail className="absolute text-[#a6ff00af] text-2xl top-33.5 left-5"/>
+                    <MdOutlineMail className="absolute text-[#a6ff00af] text-2xl bottom-80 left-5"/>
                     <input type="email" placeholder="email@exemplo.com" className="border border-solid border-[#a6ff00af] text-gray-100/60 focus:outline-none focus:shadow-lg focus:ring-2 focus:ring-[#a6ff00] transition-shadow duration-300 pt-2.5 pb-2.5 pl-15 mb-10"/>
                     <label className="text-white mb-2">Senha</label>
                     <RiLockPasswordLine className="absolute text-[#a6ff00af] text-2xl bottom-50.5 left-5"/>

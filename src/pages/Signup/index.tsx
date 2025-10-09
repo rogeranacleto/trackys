@@ -20,10 +20,10 @@ useEffect(() => {
                 <h1 className="text-white text-3xl text-center mb-3.5">Criar Conta</h1>
                 <p className="text-gray-100/60 mb-4.5 text-center">Preencha os campos abaixo para criar uma conta na Trackys</p>
                 <label className="text-white mb-2">Nome</label>
-                <FaRegUser className="absolute text-[#a6ff00af] text-lg top-33.5 left-5 max-sm:top-40"/>
+                <FaRegUser className="absolute text-[#a6ff00af] text-lg left-5 bottom-110"/>
                 <input type="email" placeholder="Crie um nome de usuário" className="border border-solid border-[#a6ff00af] text-gray-100/60 focus:outline-none focus:shadow-lg focus:ring-2 focus:ring-[#a6ff00] transition-shadow duration-300 pt-2.5 pb-2.5 pl-15 mb-10"/>
                 <label className="text-white mb-2">Email</label>
-               <MdOutlineMail className="absolute text-[#a6ff00af] text-2xl top-63 left-5 max-sm:top-69"/> 
+               <MdOutlineMail className="absolute text-[#a6ff00af] text-2xl left-5 bottom-80"/> 
                 <input type="email" placeholder="email@exemplo.com" className="border border-solid border-[#a6ff00af] text-gray-100/60 focus:outline-none focus:shadow-lg focus:ring-2 focus:ring-[#a6ff00] transition-shadow duration-300 pt-2.5 pb-2.5 pl-15 mb-10"/>
                 <label className="text-white mb-2">Senha</label>    
                 <RiLockPasswordLine className="absolute text-[#a6ff00af] text-2xl left-5 bottom-50.5"/>

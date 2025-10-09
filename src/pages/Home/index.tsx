@@ -27,7 +27,7 @@ useEffect(() => {
         <section className="w-screen min-h-screen bg-[#000] relative">
             <section className="relative z-10 flex justify-center top-60 right-5.5 p-5 flex-col items-center">
                 <div className="max-w-4xl flex flex-col justify-center items-center">
-                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#ffffffcb] text-6xl lg:text-7xl text-center font-medium">Controle seus envios de maneira rápida e eficiente</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#ffffffcb] text-6xl lg:text-7xl text-center font-medium ml-6">Controle seus envios de maneira rápida e eficiente</h1>
                     <p data-aos="fade-up" data-aos-duration="2200" className="text-[#A1A1AA] text-2xl max-w-3xl ml-15 mt-8 text-center mr-15">
                         Agora você consegue gerenciar seus processos logísticos de 
                         maneira rápida, eficiente e totalmente otimizada para o seu negócio. A <span className="font-bold">Trackys</span> conta com diversas ferramentas
@@ -43,7 +43,7 @@ useEffect(() => {
                 <img
                     src={dashboardimg}
                     alt="Background Trackys"
-                    className="max-w-7xl w-full object-contain border border-solid border-[#a6ff00] rounded-2xl shadow-[0_0_1000px_#a6ff0036] hover:shadow-[0_0_1100px_#a6ff0036,0_0_900px_#a6ff0036] transition-all duration-700"
+                    className="max-w-7xl w-full object-contain border border-solid border-[#a6ff00] rounded-2xl shadow-[0_0_1000px_#a6ff0036] hover:shadow-[0_0_1100px_#a6ff0036,0_0_900px_#a6ff0036] transition-all duration-700 ml"
                 />
             </div>
         </section>
