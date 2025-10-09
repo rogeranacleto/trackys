@@ -3,3 +3,14 @@
 *{
     font-family: "Montserrat", sans-serif;
 }
+body {
+  background-color: #000;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+@layer base {
+  ::selection {
+    @apply bg-[#a6ff00] text-black;
+  }
+}
