@@ -11,7 +11,6 @@ import logoCursor from "../../assets/logo-mouse.png";
 export function Home(){
 function scrollToSection(id: string){
  const element = document.getElementById(id)
- console.log(element)
  if (element) element.scrollIntoView({behavior: "smooth"})
 }
 
