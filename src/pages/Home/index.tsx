@@ -6,7 +6,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import logoTrackys from "../../assets/logo-trackys-2.png";
-import logoCursor from "../../assets/logo-mouse.png";
+import logoCursor from "../../assets/logo-mouse-trackys.png";
 
 export function Home(){
 function scrollToSection(id: string){
