@@ -72,7 +72,7 @@ useEffect(() => {
             <div data-aos="zoom-in-up" data-aos-duration="2600" className="max-w-6xl mx-auto mb-12">
                 <h2 className="text-[#ffffffdc] text-4xl md:text-5xl lg:text-5xl font-medium leading-15 max-sm:text-center">O que a Trackys<br />oferece?</h2>
                 <p className="text-[#A1A1AA] mt-5 max-w-lg text-lg leading-8 max-sm:text-center">
-                Você pode <strong>registrar e acompanhar cotações</strong>, <strong>envios</strong>, <strong>entregas</strong> e <strong>ocorrências de transporte.</strong> O sistema <strong>gera alertas para atrasos e divergências</strong>, possuí <strong>histórico de desempenho de terceiros</strong>. Além disso facilita a tomada de decisões e a comunicação interna.
+                Você pode <strong>registrar e acompanhar cotações</strong>, <strong>envios</strong>, <strong>entregas</strong> e <strong>ocorrências de transporte.</strong> O sistema <strong>gera alertas para atrasos e divergências</strong> e possuí <strong>histórico de desempenho de terceiros</strong>. Além disso facilita a tomada de decisões e a comunicação interna.
                 </p>
             </div>
             
