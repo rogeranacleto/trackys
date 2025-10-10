@@ -1,7 +1,7 @@
 import { HeaderHome } from "../../components/HeaderHome";
 import logoTrackys from "../../assets/logo-trackys-2.png"
 import { Link } from "react-router";
-import logoCursor from "../../assets/logo-mouse.png"
+import logoCursor from "../../assets/logo-mouse-trackys.png"
 export function NotFound(){
     return(
         <div style={{cursor: `url(${logoCursor})16 16, auto`}}>
