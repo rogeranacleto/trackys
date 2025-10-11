@@ -42,10 +42,10 @@ return () => {
                     <p className="absolute top-25 left-1/2 -translate-x-1/2 font-bold">© 2025 Desenvolvido por Roger da Silva</p>
                     <div className="flex gap-4 items-center absolute top-40 left-1/2 -translate-x-1/2">
                     <a href="https://github.com/rogerdasilva7" target="_blank">
-                        <FaGithub className="text-3xl hover:scale-120 duration-400 ease-in-out"/>
+                        <FaGithub className="text-3xl hover:scale-120 duration-400 ease-in-out text-[#000]"/>
                     </a>
                     <a href="https://www.linkedin.com/in/rogerdasilva7/" target="_blank">
-                        <FaLinkedin className="text-3xl hover:scale-120 duration-400 ease-in-out"/>
+                        <FaLinkedin className="text-3xl hover:scale-120 duration-400 ease-in-out text-[#000]"/>
                     </a>
                     </div>
                 </div>

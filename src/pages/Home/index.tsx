@@ -42,7 +42,7 @@ useEffect(() => {
                 <img
                     src={dashboardimg}
                     alt="Background Trackys"
-                    className="max-w-7xl w-full object-contain border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_800px_#dedede88] hover:shadow-[0_0_900px_#dedede88,0_0_1000px_#dedede88] transition-all duration-400"
+                    className="max-w-7xl w-full object-contain border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_800px_#dedede88] hover:shadow-[0_0_900px_#dedede88,0_0_1000px_#dedede88] hover:scale-101   transition-all duration-400"
                 />
             </div>
         </section>
@@ -83,7 +83,7 @@ useEffect(() => {
                         </div>
                         <h3 className="text-2xl font-semibold mb-2 mt-15">Dashboard Principal</h3>
                         <p className="text-[#dedede88] font-medium">
-                            No dashboard principal, acompanhe os principais indicadores do seu negócio. Visualize envios, entregas concluídas, taxas de atraso, economias obtidas e muito mais.</p>
+                            No dashboard principal, acompanhe os principais indicadores do seu negócio. Visualize envios, entregas concluídas, entregas em atraso, economias obtidas e muito mais.</p>
                     </div>
                 </div>
                 <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
@@ -93,7 +93,7 @@ useEffect(() => {
                     <div>
                         <h3 className="text-2xl font-semibold mb-2 mt-15">Registro de Cotações</h3>
                         <p className="text-[#dedede88] font-medium">
-                            Aqui você pode registrar suas cotações, informando dados como transportador, valor, prazo de entrega, data e observações. Depois, é possível comparar as opções e selecionar vencedor para o envio do produto.</p>
+                            Aqui você pode registrar suas cotações, informando dados como transportador, valor, prazo de entrega, data e observações. Depois, é possível comparar as opções e selecionar o vencedor para o envio do produto.</p>
                     </div>
                 </div>
                 <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">

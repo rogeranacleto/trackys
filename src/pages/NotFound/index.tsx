@@ -13,7 +13,7 @@ export function NotFound(){
                     </h1>
                     <p className="text-white text-4xl mb-8">Ops, página não encontrada!</p>
                     <Link to={"/"}>
-                        <Button className="cursor pointer text-[#000] bg-[#a6ff008f] hover:bg-[#a6ff00] p-6 duration-400 ease-in-out cursor-pointer text-lg">Página inicial</Button>
+                        <Button className="max-w-lg w-full m-auto bg-[#dedede88] cursor pointer text-[#000] hover:bg-[#dedede] p-6 duration-400 ease-in-out cursor-pointer text-lg">Página inicial</Button>
                     </Link>
                 </div>
             </div>
