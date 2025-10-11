@@ -59,9 +59,9 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
             </Field>
             <FieldGroup>
               <Field>
-                <Button type="submit">Criar conta</Button>
+                <Button type="submit" className="cursor-pointer bg-[#dedede88] hover:bg-[#dedede] duration-400">Criar conta</Button>
                 <FieldDescription className="px-6 text-center">
-                  Ja tem uma conta? <Link to={"/login"}>Entrar</Link>
+                  Ja tem uma conta? <Link to={"/login"} className="hover:text-[#D0D0D0] duration-400">Entrar</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>

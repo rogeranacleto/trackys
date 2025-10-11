@@ -1,10 +1,10 @@
 import { HeaderHome } from "../../components/HeaderHome";
 import logoTrackys from "../../assets/logo-trackys-2.png"
 import { Link } from "react-router";
-import logoCursor from "../../assets/logo-mouse-trackys.png"
+import { Button } from "@/components/ui/button";
 export function NotFound(){
     return(
-        <div style={{cursor: `url(${logoCursor})16 16, auto`}}>
+        <div>
             <HeaderHome/>
             <div className="max-w-screen min-h-screen flex justify-center">
                 <div className="max-w-2xl w-full h-[420px] mt-45 text-center flex justify-center flex-col items-center">
@@ -13,7 +13,7 @@ export function NotFound(){
                     </h1>
                     <p className="text-white text-4xl mb-8">Ops, página não encontrada!</p>
                     <Link to={"/"}>
-                        <button className="bg-black cursor pointer border text-[#a6ff00] border-[#a6ff00] hover:bg-[#a6ff00] hover:text-[#000] px-6 py-3 duration-700 ease-in-out cursor-pointer text-lg">Página inicial</button>
+                        <Button className="cursor pointer text-[#000] bg-[#a6ff008f] hover:bg-[#a6ff00] p-6 duration-400 ease-in-out cursor-pointer text-lg">Página inicial</Button>
                     </Link>
                 </div>
             </div>
