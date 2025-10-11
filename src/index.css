@@ -14,7 +14,7 @@ body {
 
 @layer base {
   ::selection {
-    @apply bg-[#a6ff00] text-black;
+    @apply bg-[#E5E5E5] text-black;
   }
 }
 
