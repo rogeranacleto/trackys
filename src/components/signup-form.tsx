@@ -17,18 +17,18 @@ import { Input } from "@/components/ui/input"
 
 export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
   return (
-    <Card {...props}>
+    <Card className={("flex flex-col gap-6 dark")}{...props}>
       <CardHeader>
-        <CardTitle>Create an account</CardTitle>
+        <CardTitle>Crie uma conta</CardTitle>
         <CardDescription>
-          Enter your information below to create your account
+          Insira suas informações abaixo para criar sua conta
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form>
           <FieldGroup>
             <Field>
-              <FieldLabel htmlFor="name">Full Name</FieldLabel>
+              <FieldLabel htmlFor="name">Nome Completo</FieldLabel>
               <Input id="name" type="text" placeholder="John Doe" required />
             </Field>
             <Field>
@@ -40,32 +40,28 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 required
               />
               <FieldDescription>
-                We&apos;ll use this to contact you. We will not share your email
-                with anyone else.
+                Usaremos isso para entrar em contato com você. Não compartilharemos seu e-mail com mais ninguém.
               </FieldDescription>
             </Field>
             <Field>
-              <FieldLabel htmlFor="password">Password</FieldLabel>
+              <FieldLabel htmlFor="password">Senha</FieldLabel>
               <Input id="password" type="password" required />
               <FieldDescription>
-                Must be at least 8 characters long.
+                Deve ter pelo menos 6 caracteres.
               </FieldDescription>
             </Field>
             <Field>
               <FieldLabel htmlFor="confirm-password">
-                Confirm Password
+                Confirmar Senha
               </FieldLabel>
               <Input id="confirm-password" type="password" required />
-              <FieldDescription>Please confirm your password.</FieldDescription>
+              <FieldDescription>Por favor confirme sua senha.</FieldDescription>
             </Field>
             <FieldGroup>
               <Field>
-                <Button type="submit">Create Account</Button>
-                <Button variant="outline" type="button">
-                  Sign up with Google
-                </Button>
+                <Button type="submit">Criar conta</Button>
                 <FieldDescription className="px-6 text-center">
-                  Already have an account? <Link to={"/login"}>Sign in</Link>
+                  Ja tem uma conta? <Link to={"/login"}>Entrar</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>
