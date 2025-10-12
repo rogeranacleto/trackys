@@ -42,7 +42,7 @@ useEffect(() => {
                 <img
                     src={dashboardimg}
                     alt="Background Trackys"
-                    className="max-w-7xl w-full object-contain border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_800px_#dedede88] hover:shadow-[0_0_900px_#dedede88,0_0_1000px_#dedede88] hover:scale-101   transition-all duration-400"
+                    className="max-w-7xl w-full object-contain border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_120px_#dedede88] hover:shadow-[0_0_120px_#dedede88,0_0_125px_#dedede88] hover:scale-101   transition-all duration-400"
                 />
             </div>
         </section>
@@ -76,7 +76,7 @@ useEffect(() => {
             </div>
             
             <div data-aos="zoom-in-up" data-aos-duration="2500" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto gap-8 ">
-                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
+                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_90px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
                     <div className="flex flex-col justify-between">
                         <div className="mt-8">
                             <img src={dashboardimg} alt="" className="rounded-lg w-full" />
@@ -86,7 +86,7 @@ useEffect(() => {
                             No dashboard principal, acompanhe os principais indicadores do seu negócio. Visualize envios, entregas concluídas, entregas em atraso, economias obtidas e muito mais.</p>
                     </div>
                 </div>
-                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
+                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_90px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
                     <div className="mt-8">
                         <img src={dashboardimg} alt="" className="rounded-lg w-full" />
                     </div>
@@ -96,7 +96,7 @@ useEffect(() => {
                             Aqui você pode registrar suas cotações, informando dados como transportador, valor, prazo de entrega, data e observações. Depois, é possível comparar as opções e selecionar o vencedor para o envio do produto.</p>
                     </div>
                 </div>
-                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
+                <div className="bg-[#000] p-6 flex flex-col max-w-[420px] min-h-[480px] border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_90px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
                     <div>
                     <div className="mt-8">
                         <img src={dashboardimg} alt="" className="rounded-lg w-full" />
@@ -109,7 +109,7 @@ useEffect(() => {
                 </div>
             </div>
             <div data-aos="zoom-in-up" data-aos-duration="2400" className="grid grid-cols-1 lg:grid-cols-2 max-w-6xl mx-auto gap-8 mt-8">
-                <div className="bg-[#000] p-6 flex flex-col border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
+                <div className="bg-[#000] p-6 flex flex-col border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_90px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
                     <div className="mt-8">
                         <img src={dashboardimg} alt="" className="rounded-lg w-full" />
                     </div>
@@ -118,7 +118,7 @@ useEffect(() => {
                         Dashboard intuitivo com resumo dos envios. Visualize facilmente quantos estão em transporte, atrasados ou concluídos, com alertas automáticos para entregas fora do prazo.
                         </p>
                 </div>
-                <div className="bg-[#000] p-6 flex flex-col border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_110px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
+                <div className="bg-[#000] p-6 flex flex-col border border-solid border-[#dedede88] rounded-2xl shadow-[0_0_90px_#dedede88] hover:shadow-[0_0_100px_#dedede88,0_0_90px_#dedede88] hover:scale-110 transition-all duration-400 max-sm:m-auto">
                     <div className="mt-8">
                         <img src={dashboardimg} alt="" className="rounded-lg w-full" />
                     </div>

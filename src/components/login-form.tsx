@@ -26,7 +26,7 @@ export function LoginForm({
         <CardHeader>
           <CardTitle>Faça login na sua conta</CardTitle>
           <CardDescription>
-            Digite seu email abaixo para fazer login. 
+            Preencha os campos abaixo para fazer login. 
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -37,7 +37,7 @@ export function LoginForm({
                 <Input
                   id="email"
                   type="email"
-                  placeholder="m@example.com"
+                  placeholder="email@exemplo.com"
                   required
                 />
               </Field>
