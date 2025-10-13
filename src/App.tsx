@@ -3,6 +3,13 @@ import { Login } from "./pages/Login";
 import { Signup } from "./pages/Signup";
 import { Home } from "./pages/Home";
 import { NotFound } from "./pages/NotFound";
+import { Layout } from "./layout";
+import { Cotacoes } from "./pages/Admin/Cotacoes";
+import { Dashboard } from "./pages/Admin/Dashboard";
+import { Entregas } from "./pages/Admin/Entregas";
+import { Envios } from "./pages/Admin/Envios";
+import { Indicadores } from "./pages/Admin/Indicadores";
+import { Ocorrencias } from "./pages/Admin/Ocorrencias";
 
 const route = createBrowserRouter([
   {
@@ -16,6 +23,35 @@ const route = createBrowserRouter([
   {
     element: <Signup/>,
     path:"/signup"
+  },
+  {
+    element: <Layout/>,
+    children:[
+      {
+        element: <Dashboard/>,
+        path: "/admin/dashboard"
+      },
+      {
+        element: <Cotacoes/>,
+        path: "/admin/cotacoes"
+      },
+      {
+        element: <Envios/>,
+        path: "/admin/envios"
+      },
+      {
+        element: <Entregas/>,
+        path: "/admin/entregas"
+      },
+      {
+        element: <Indicadores/>,
+        path: "/admin/indicadores"
+      },
+      {
+        element: <Ocorrencias/>,
+        path: "/admin/ocorrencias"
+      }
+    ]
   },
   {
     element: <NotFound/>,

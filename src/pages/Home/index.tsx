@@ -26,13 +26,13 @@ useEffect(() => {
         <section className="w-screen min-h-screen bg-[#000] relative">
             <section className="relative z-10 flex justify-center top-60 right-5.5 p-5 flex-col items-center">
                 <div className="max-w-4xl flex flex-col justify-center items-center">
-                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#dedede] text-6xl lg:text-7xl text-center max-sm:text-left font-medium ml-6 max-sm:ml-15">Controle seus envios de maneira rápida e eficiente</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="2300" className="text-[#dedede] text-7xl lg:text-7xl text-center max-sm:text-left ml-6 max-sm:ml-15 font-medium">Controle seus envios de maneira rápida e eficiente</h1>
                     <p data-aos="fade-up" data-aos-duration="2200" className="text-[#dedede88] text-2xl max-w-3xl ml-15 mt-8 lg:text-center mr-15">
                         Agora você consegue gerenciar seus processos logísticos de 
                         maneira rápida, eficiente e totalmente otimizada para o seu negócio. A <span className="font-bold">Trackys</span> conta com diversas ferramentas
                         que ajudam você a resolver problemas logísticos.
                     </p>
-                        <div data-aos="fade-up" data-aos-duration="2100" className="flex items-center justify-center flex-col ml-12">
+                        <div data-aos="fade-up" data-aos-duration="2100" className="flex items-center justify-center flex-col ml-7">
                             <button className="cursor-pointer text-[#dedede] text-lg duration-400 ease-in-out mt-10 hover:text-[#dedede] hover:scale-110 hover:mb-2" onClick={() => scrollToSection("about")}>Saber mais</button>
                             <FaArrowDown className="text-[#dedede] mt-5"/>
                         </div>
