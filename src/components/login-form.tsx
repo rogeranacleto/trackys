@@ -37,13 +37,29 @@ async function loginUser(e: FormEvent){
       </div>
     );
     navigate("/dashboard")
-  }catch(error){
-  toast.error(
-    <div>
-        <h2 className="text-white font-bold text-sm">Erro no Login</h2>
-        <p className="text-gray-100/60 text-sm">Ocorreu um erro nas credenciais ao tentar fazer login.</p>
-    </div>
-    )
+  }catch (error: any) {
+    if (error.code === "auth/weak-password") {
+      toast.error(
+      <div>
+        <h2 className="text-white font-bold text-sm">Senha Fraca</h2>
+        <p className="text-gray-100/60 text-sm">Precisa ter no mínimo 6 caracteres.</p>
+      </div>
+    );
+    } else if (error.code === "auth/email-already-in-use") {
+        toast.error(
+        <div>
+          <h2 className="text-white font-bold text-sm">Email Existente</h2>
+          <p className="text-gray-100/60 text-sm">Esse email já está em uso.</p>
+        </div>
+    );
+    } else {
+        toast.error(
+        <div>
+          <h2 className="text-white font-bold text-sm">Erro</h2>
+          <p className="text-gray-100/60 text-sm">Ocorreu um erro inesperado</p>
+        </div>
+    );
+    }
   }
 }
 
