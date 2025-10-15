@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth"
 import { Link } from "react-router"
 import { useState, type FormEvent } from "react"
 import { useNavigate } from "react-router"
+import toast from "react-hot-toast"
 import {
   Card,
   CardContent,
@@ -38,14 +39,24 @@ async function createUser(e: FormEvent){
     await updateProfile(nameUser, {
       displayName: name
     })
-    alert("cadastrado com sucesso")
+    toast.success(
+      <div>
+        <h2 className="text-white font-bold text-sm">Conta criada</h2>
+        <p className="text-gray-100/60 text-sm">A conta foi criada com sucesso.</p>
+      </div>
+    );
     setName("");
     setEmail("");
     setPassword("");
     setConfirmPassword("");
     navigate("/login")
   }catch(error){
-    alert(error)
+    toast.error(
+      <div>
+        <h2 className="text-white font-bold text-sm">Erro ao criar conta</h2>
+        <p className="text-gray-100/60 text-sm">Algo deu errado, acione o suporte para mais informações.</p>
+      </div>
+    );
   }
 }
 
