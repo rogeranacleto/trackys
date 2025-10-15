@@ -1,25 +1,17 @@
 import * as React from "react"
+import logoTrackys from "../../src/assets/logo-trackys-2.png"
 import {
   IconCamera,
   IconChartBar,
   IconDashboard,
-  IconDatabase,
   IconFileAi,
   IconFileDescription,
-  IconFileWord,
   IconFolder,
-  IconHelp,
   IconInnerShadowTop,
   IconListDetails,
-  IconReport,
-  IconSearch,
-  IconSettings,
   IconUsers,
 } from "@tabler/icons-react"
-
-import { NavDocuments } from "@/components/nav-documents"
-import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
+import { Link } from "react-router"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -40,27 +32,32 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/admin/dashboard",
       icon: IconDashboard,
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Cotações",
+      url: "/admin/cotacoes",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
-      url: "#",
+      title: "Envios",
+      url: "/admin/envios",
       icon: IconChartBar,
     },
     {
-      title: "Projects",
-      url: "#",
+      title: "Entregas",
+      url: "/admin/entregas",
       icon: IconFolder,
     },
     {
-      title: "Team",
-      url: "#",
+      title: "Ocorrências",
+      url: "/admin/ocorrencias",
+      icon: IconUsers,
+    },
+        {
+      title: "Indicadores",
+      url: "/admin/indicadores",
       icon: IconUsers,
     },
   ],
@@ -112,66 +109,41 @@ const data = {
       ],
     },
   ],
-  navSecondary: [
-    {
-      title: "Settings",
-      url: "#",
-      icon: IconSettings,
-    },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: IconHelp,
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: IconSearch,
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: IconDatabase,
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: IconReport,
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: IconFileWord,
-    },
-  ],
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props}>
-      <SidebarHeader>
+      <SidebarHeader className="bg-[#171717] text-[#fff]">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:!p-4 hover:bg-[#171717] hover:text-[#fff]"
             >
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold">Acme Inc.</span>
+                <img src={logoTrackys} alt="Logo Trackys" className="w-6"/>
+                <span className=" font-semibold text-lg">Trackys</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
-      </SidebarContent>
-      <SidebarFooter>
+        <SidebarContent className="bg-[#171717] pl-4 pr-4">
+          <SidebarMenu>
+            {data.navMain.map((item) => (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton asChild className="text-white mt-2 hover:bg-[#2c2b2b] hover:text-[#fff]">
+                  <Link to={item.url} className="flex items-center">
+                    <item.icon className="!size-5" />
+                    <span>{item.title}</span>
+                  </Link>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            ))}
+          </SidebarMenu>
+        </SidebarContent>
+      <SidebarFooter className="bg-[#171717] text-white">
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>

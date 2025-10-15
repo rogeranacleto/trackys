@@ -30,7 +30,7 @@ async function loginUser(e: FormEvent){
   try{
     await signInWithEmailAndPassword(auth, email, password)
     alert ("logado com sucesso")
-    navigate("/admin/dashboard")
+    navigate("/dashboard")
   }catch(error){
     alert(error);
   }
