@@ -19,6 +19,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import toast from "react-hot-toast"
 
 export function LoginForm({className, ...props}: React.ComponentProps<"div">) {
 const [email, setEmail] = useState("");
@@ -29,10 +30,20 @@ async function loginUser(e: FormEvent){
   e.preventDefault();
   try{
     await signInWithEmailAndPassword(auth, email, password)
-    alert ("logado com sucesso")
+    toast.success(
+      <div>
+        <h2 className="text-white font-bold text-sm">Login efetuado</h2>
+        <p className="text-gray-100/60 text-sm">O login foi efetuado com sucesso.</p>
+      </div>
+    );
     navigate("/dashboard")
   }catch(error){
-    alert(error);
+  toast.error(
+    <div>
+        <h2 className="text-white font-bold text-sm">Erro no Login</h2>
+        <p className="text-gray-100/60 text-sm">Ocorreu um erro nas credenciais ao tentar fazer login.</p>
+    </div>
+    )
   }
 }
 
