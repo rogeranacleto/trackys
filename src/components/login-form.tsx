@@ -36,7 +36,7 @@ async function loginUser(e: FormEvent){
         <p className="text-gray-100/60 text-sm">O login foi efetuado com sucesso.</p>
       </div>
     );
-    navigate("/dashboard")
+    navigate("/admin/dashboard")
   }catch (error: any) {
     if (error.code === "auth/weak-password") {
       toast.error(
