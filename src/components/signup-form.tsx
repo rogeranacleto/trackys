@@ -41,7 +41,7 @@ async function createUser(e: FormEvent){
     })
     toast.success(
       <div>
-        <h2 className="text-white font-bold text-sm">Conta criada</h2>
+        <h2 className="text-[#dedede] font-bold text-sm">Conta criada</h2>
         <p className="text-gray-100/60 text-sm">A conta foi criada com sucesso.</p>
       </div>
     );
@@ -53,7 +53,7 @@ async function createUser(e: FormEvent){
   }catch(error){
     toast.error(
       <div>
-        <h2 className="text-white font-bold text-sm">Erro ao criar conta</h2>
+        <h2 className="text-[#dedede] font-bold text-sm">Erro ao criar conta</h2>
         <p className="text-gray-100/60 text-sm">Algo deu errado, acione o suporte para mais informações.</p>
       </div>
     );
