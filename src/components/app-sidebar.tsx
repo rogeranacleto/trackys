@@ -113,7 +113,7 @@ const data = {
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar collapsible="offcanvas" {...props}>
+    <Sidebar collapsible="offcanvas" {...props} className="border-none">
       <SidebarHeader className="bg-[#171717] text-[#fff]">
         <SidebarMenu>
           <SidebarMenuItem>
