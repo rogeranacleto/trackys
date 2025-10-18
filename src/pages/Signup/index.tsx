@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export function Signup(){
 
 useEffect(() => {
-    AOS.init({
+    AOS.init({  
         once: true,
         offset: 50
     })
