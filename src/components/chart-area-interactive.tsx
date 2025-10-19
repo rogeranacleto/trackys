@@ -165,7 +165,7 @@ export function ChartAreaInteractive() {
   })
 
   return (
-    <Card className="@container/card">
+    <Card className="@container/card ml-8 mr-8 bg-[#171717]">
       <CardHeader>
         <CardTitle>Total Visitors</CardTitle>
         <CardDescription>

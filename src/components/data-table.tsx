@@ -1,3 +1,4 @@
+"use client"
 import * as React from "react"
 import {
   closestCenter,
@@ -50,7 +51,6 @@ import {
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import { toast } from "sonner"
 import { z } from "zod"
-
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -103,7 +103,6 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/components/ui/tabs"
-
 export const schema = z.object({
   id: z.number(),
   header: z.string(),
@@ -113,13 +112,11 @@ export const schema = z.object({
   limit: z.string(),
   reviewer: z.string(),
 })
-
 // Create a separate component for the drag handle
 function DragHandle({ id }: { id: number }) {
   const { attributes, listeners } = useSortable({
     id,
   })
-
   return (
     <Button
       {...attributes}
@@ -133,7 +130,6 @@ function DragHandle({ id }: { id: number }) {
     </Button>
   )
 }
-
 const columns: ColumnDef<z.infer<typeof schema>>[] = [
   {
     id: "drag",
@@ -254,11 +250,9 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     header: "Reviewer",
     cell: ({ row }) => {
       const isAssigned = row.original.reviewer !== "Assign reviewer"
-
       if (isAssigned) {
         return row.original.reviewer
       }
-
       return (
         <>
           <Label htmlFor={`${row.original.id}-reviewer`} className="sr-only">
@@ -308,12 +302,10 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     ),
   },
 ]
-
 function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
   const { transform, transition, setNodeRef, isDragging } = useSortable({
     id: row.original.id,
   })
-
   return (
     <TableRow
       data-state={row.getIsSelected() && "selected"}
@@ -333,7 +325,6 @@ function DraggableRow({ row }: { row: Row<z.infer<typeof schema>> }) {
     </TableRow>
   )
 }
-
 export function DataTable({
   data: initialData,
 }: {
@@ -357,12 +348,10 @@ export function DataTable({
     useSensor(TouchSensor, {}),
     useSensor(KeyboardSensor, {})
   )
-
   const dataIds = React.useMemo<UniqueIdentifier[]>(
     () => data?.map(({ id }) => id) || [],
     [data]
   )
-
   const table = useReactTable({
     data,
     columns,
@@ -387,7 +376,6 @@ export function DataTable({
     getFacetedRowModel: getFacetedRowModel(),
     getFacetedUniqueValues: getFacetedUniqueValues(),
   })
-
   function handleDragEnd(event: DragEndEvent) {
     const { active, over } = event
     if (active && over && active.id !== over.id) {
@@ -398,11 +386,10 @@ export function DataTable({
       })
     }
   }
-
   return (
     <Tabs
       defaultValue="outline"
-      className="w-full flex-col justify-start gap-6"
+      className="w-full flex-col justify-start pl-3 pr-3 pt-8 pb-5"
     >
       <div className="flex items-center justify-between px-4 lg:px-6">
         <Label htmlFor="view-selector" className="sr-only">
@@ -624,7 +611,6 @@ export function DataTable({
     </Tabs>
   )
 }
-
 const chartData = [
   { month: "January", desktop: 186, mobile: 80 },
   { month: "February", desktop: 305, mobile: 200 },
@@ -633,7 +619,6 @@ const chartData = [
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
 ]
-
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -644,10 +629,8 @@ const chartConfig = {
     color: "var(--primary)",
   },
 } satisfies ChartConfig
-
 function TableCellViewer({ item }: { item: z.infer<typeof schema> }) {
   const isMobile = useIsMobile()
-
   return (
     <Drawer direction={isMobile ? "bottom" : "right"}>
       <DrawerTrigger asChild>

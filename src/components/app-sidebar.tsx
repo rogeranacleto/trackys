@@ -1,17 +1,25 @@
+"use client"
 import * as React from "react"
-import logoTrackys from "../../src/assets/logo-trackys-2.png"
 import {
   IconCamera,
   IconChartBar,
   IconDashboard,
+  IconDatabase,
   IconFileAi,
   IconFileDescription,
+  IconFileWord,
   IconFolder,
+  IconHelp,
   IconInnerShadowTop,
   IconListDetails,
+  IconReport,
+  IconSearch,
+  IconSettings,
   IconUsers,
 } from "@tabler/icons-react"
-import { Link } from "react-router"
+import { NavDocuments } from "@/components/nav-documents"
+import { NavMain } from "@/components/nav-main"
+import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -22,7 +30,6 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
-
 const data = {
   user: {
     name: "shadcn",
@@ -32,32 +39,27 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "/admin/dashboard",
+      url: "#",
       icon: IconDashboard,
     },
     {
       title: "Cotações",
-      url: "/admin/cotacoes",
+      url: "#",
       icon: IconListDetails,
     },
     {
       title: "Envios",
-      url: "/admin/envios",
+      url: "#",
       icon: IconChartBar,
     },
     {
       title: "Entregas",
-      url: "/admin/entregas",
+      url: "#",
       icon: IconFolder,
     },
     {
       title: "Ocorrências",
-      url: "/admin/ocorrencias",
-      icon: IconUsers,
-    },
-        {
-      title: "Indicadores",
-      url: "/admin/indicadores",
+      url: "#",
       icon: IconUsers,
     },
   ],
@@ -109,41 +111,65 @@ const data = {
       ],
     },
   ],
+  navSecondary: [
+    {
+      title: "Configurações",
+      url: "#",
+      icon: IconSettings,
+    },
+    {
+      title: "Get Help",
+      url: "#",
+      icon: IconHelp,
+    },
+    {
+      title: "Pesquisar",
+      url: "#",
+      icon: IconSearch,
+    },
+  ],
+  documents: [
+    {
+      name: "Indicadores",
+      url: "#",
+      icon: IconDatabase,
+    },
+    {
+      name: "Relatórios",
+      url: "#",
+      icon: IconReport,
+    },
+    {
+      name: "Suporte",
+      url: "#",
+      icon: IconFileWord,
+    },
+  ],
 }
-
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="offcanvas" {...props} className="border-none">
-      <SidebarHeader className="bg-[#171717] text-[#fff]">
+      <SidebarHeader className="bg-[#171717] text-[#fff] pt-6 pl-4" >
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-4 hover:bg-[#171717] hover:text-[#fff]"
+              className="data-[slot=sidebar-menu-button]:!p-1.5"
             >
               <a href="#">
-                <img src={logoTrackys} alt="Logo Trackys" className="w-6"/>
-                <span className=" font-semibold text-lg">Trackys</span>
+                <IconInnerShadowTop className="!size-5" />
+                <span className="text-base font-semibold">Trackys</span>
               </a>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-        <SidebarContent className="bg-[#171717] pl-4 pr-4">
-          <SidebarMenu>
-            {data.navMain.map((item) => (
-              <SidebarMenuItem key={item.title}>
-                <SidebarMenuButton asChild className="text-white mt-1 hover:bg-[#2c2b2b] hover:text-[#fff]">
-                  <Link to={item.url} className="flex items-center">
-                    <item.icon className="!size-4" />
-                    <span>{item.title}</span>
-                  </Link>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-            ))}
-          </SidebarMenu>
-        </SidebarContent>
-      <SidebarFooter className="bg-[#171717] text-white">
+      <SidebarContent className="bg-[#171717] text-[#fff] pl-2.5">
+        <NavMain items={data.navMain} />
+        <NavDocuments items={data.documents}/>
+        <NavSecondary items={data.navSecondary} className="mt-auto" />
+      </SidebarContent>
+      <SidebarFooter className="bg-[#171717] text-[#fff] pl-4">
         <NavUser user={data.user} />
       </SidebarFooter>
     </Sidebar>
