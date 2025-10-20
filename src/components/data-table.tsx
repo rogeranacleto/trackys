@@ -112,7 +112,7 @@ export const schema = z.object({
   limit: z.string(),
   reviewer: z.string(),
 })
-// Create a separate component for the drag handle
+
 function DragHandle({ id }: { id: number }) {
   const { attributes, listeners } = useSortable({
     id,
@@ -126,7 +126,7 @@ function DragHandle({ id }: { id: number }) {
       className="text-muted-foreground size-7 hover:bg-transparent"
     >
       <IconGripVertical className="text-muted-foreground size-3" />
-      <span className="sr-only">Drag to reorder</span>
+      <span className="sr-only">Ordenar</span>
     </Button>
   )
 }
@@ -164,90 +164,15 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
   },
   {
     accessorKey: "header",
-    header: "Header",
+    header: "Nota Fiscal",
     cell: ({ row }) => {
       return <TableCellViewer item={row.original} />
     },
     enableHiding: false,
   },
-  {
-    accessorKey: "type",
-    header: "Section Type",
-    cell: ({ row }) => (
-      <div className="w-32">
-        <Badge variant="outline" className="text-muted-foreground px-1.5">
-          {row.original.type}
-        </Badge>
-      </div>
-    ),
-  },
-  {
-    accessorKey: "status",
-    header: "Status",
-    cell: ({ row }) => (
-      <Badge variant="outline" className="text-muted-foreground px-1.5">
-        {row.original.status === "Done" ? (
-          <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
-        ) : (
-          <IconLoader />
-        )}
-        {row.original.status}
-      </Badge>
-    ),
-  },
-  {
-    accessorKey: "target",
-    header: () => <div className="w-full text-right">Target</div>,
-    cell: ({ row }) => (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
-            loading: `Saving ${row.original.header}`,
-            success: "Done",
-            error: "Error",
-          })
-        }}
-      >
-        <Label htmlFor={`${row.original.id}-target`} className="sr-only">
-          Target
-        </Label>
-        <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
-          defaultValue={row.original.target}
-          id={`${row.original.id}-target`}
-        />
-      </form>
-    ),
-  },
-  {
-    accessorKey: "limit",
-    header: () => <div className="w-full text-right">Limit</div>,
-    cell: ({ row }) => (
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          toast.promise(new Promise((resolve) => setTimeout(resolve, 1000)), {
-            loading: `Saving ${row.original.header}`,
-            success: "Done",
-            error: "Error",
-          })
-        }}
-      >
-        <Label htmlFor={`${row.original.id}-limit`} className="sr-only">
-          Limit
-        </Label>
-        <Input
-          className="hover:bg-input/30 focus-visible:bg-background dark:hover:bg-input/30 dark:focus-visible:bg-input/30 h-8 w-16 border-transparent bg-transparent text-right shadow-none focus-visible:border dark:bg-transparent"
-          defaultValue={row.original.limit}
-          id={`${row.original.id}-limit`}
-        />
-      </form>
-    ),
-  },
-  {
-    accessorKey: "reviewer",
-    header: "Reviewer",
+    {
+    accessorKey: "Cliente",
+    header: "Cliente",
     cell: ({ row }) => {
       const isAssigned = row.original.reviewer !== "Assign reviewer"
       if (isAssigned) {
@@ -278,6 +203,74 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
     },
   },
   {
+    accessorKey: "Transportadora",
+    header: "Transportadora",
+    cell: ({ row }) => (
+      <div className="w-32">
+        <Badge variant="outline" className="text-muted-foreground px-1.5">
+          {row.original.type}
+        </Badge>
+      </div>
+    ),
+  },
+    {
+    accessorKey: "Destino",
+    header: "Destino",
+    cell: ({ row }) => {
+      const isAssigned = row.original.reviewer !== "Assign reviewer"
+      if (isAssigned) {
+        return row.original.reviewer
+      }
+      return (
+        <>
+          <Label htmlFor={`${row.original.id}-reviewer`} className="sr-only">
+            Reviewer
+          </Label>
+          <Select>
+            <SelectTrigger
+              className="w-38 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate"
+              size="sm"
+              id={`${row.original.id}-reviewer`}
+            >
+              <SelectValue placeholder="Assign reviewer" />
+            </SelectTrigger>
+            <SelectContent align="end">
+              <SelectItem value="Eddie Lake">Eddie Lake</SelectItem>
+              <SelectItem value="Jamik Tashpulatov">
+                Jamik Tashpulatov
+              </SelectItem>
+            </SelectContent>
+          </Select>
+        </>
+      )
+    },
+  },
+  {
+    accessorKey: "Prazo",
+    header: "Prazo",
+    cell: ({ row }) => (
+      <div className="w-32">
+        <Badge variant="outline" className="text-muted-foreground px-1.5">
+          {row.original.type}
+        </Badge>
+      </div>
+    ),
+  },
+    {
+    accessorKey: "Status",
+    header: "Status",
+    cell: ({ row }) => (
+      <Badge variant="outline" className="text-muted-foreground px-1.5">
+        {row.original.status === "Done" ? (
+          <IconCircleCheckFilled className="fill-green-500 dark:fill-green-400" />
+        ) : (
+          <IconLoader />
+        )}
+        {row.original.status}
+      </Badge>
+    ),
+  },
+  {
     id: "actions",
     cell: () => (
       <DropdownMenu>
@@ -288,15 +281,13 @@ const columns: ColumnDef<z.infer<typeof schema>>[] = [
             size="icon"
           >
             <IconDotsVertical />
-            <span className="sr-only">Open menu</span>
+            <span className="sr-only">Abrir Menu</span>
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="w-32">
-          <DropdownMenuItem>Edit</DropdownMenuItem>
-          <DropdownMenuItem>Make a copy</DropdownMenuItem>
-          <DropdownMenuItem>Favorite</DropdownMenuItem>
+          <DropdownMenuItem>Editar</DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+          <DropdownMenuItem variant="destructive">Deletar</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     ),
@@ -425,8 +416,8 @@ export function DataTable({
             <DropdownMenuTrigger asChild>
               <Button variant="outline" size="sm">
                 <IconLayoutColumns />
-                <span className="hidden lg:inline">Customize Columns</span>
-                <span className="lg:hidden">Columns</span>
+                <span className="hidden lg:inline">Customizar Colunas</span>
+                <span className="lg:hidden">Colunas</span>
                 <IconChevronDown />
               </Button>
             </DropdownMenuTrigger>
@@ -456,7 +447,7 @@ export function DataTable({
           </DropdownMenu>
           <Button variant="outline" size="sm">
             <IconPlus />
-            <span className="hidden lg:inline">Add Section</span>
+            <span className="hidden lg:inline">Adicionar Registro</span>
           </Button>
         </div>
       </div>
@@ -507,7 +498,7 @@ export function DataTable({
                       colSpan={columns.length}
                       className="h-24 text-center"
                     >
-                      No results.
+                      Sem resultados
                     </TableCell>
                   </TableRow>
                 )}
@@ -517,13 +508,12 @@ export function DataTable({
         </div>
         <div className="flex items-center justify-between px-4">
           <div className="text-muted-foreground hidden flex-1 text-sm lg:flex">
-            {table.getFilteredSelectedRowModel().rows.length} of{" "}
-            {table.getFilteredRowModel().rows.length} row(s) selected.
+            {table.getFilteredSelectedRowModel().rows.length} {" "} linhas selecionadas de {table.getFilteredRowModel().rows.length}.
           </div>
           <div className="flex w-full items-center gap-8 lg:w-fit">
             <div className="hidden items-center gap-2 lg:flex">
               <Label htmlFor="rows-per-page" className="text-sm font-medium">
-                Rows per page
+                Linhas por página
               </Label>
               <Select
                 value={`${table.getState().pagination.pageSize}`}
@@ -546,7 +536,7 @@ export function DataTable({
               </Select>
             </div>
             <div className="flex w-fit items-center justify-center text-sm font-medium">
-              Page {table.getState().pagination.pageIndex + 1} of{" "}
+              Página {table.getState().pagination.pageIndex + 1} de{" "}
               {table.getPageCount()}
             </div>
             <div className="ml-auto flex items-center gap-2 lg:ml-0">
@@ -556,7 +546,7 @@ export function DataTable({
                 onClick={() => table.setPageIndex(0)}
                 disabled={!table.getCanPreviousPage()}
               >
-                <span className="sr-only">Go to first page</span>
+                <span className="sr-only">Ir para primeira página</span>
                 <IconChevronsLeft />
               </Button>
               <Button
@@ -566,7 +556,7 @@ export function DataTable({
                 onClick={() => table.previousPage()}
                 disabled={!table.getCanPreviousPage()}
               >
-                <span className="sr-only">Go to previous page</span>
+                <span className="sr-only">Ir para a página anterior</span>
                 <IconChevronLeft />
               </Button>
               <Button
