@@ -15,9 +15,9 @@ export function SectionCards() {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5.5 p-8">
       <Card className="@container/card bg-[#171717]">
         <CardHeader>
-          <CardDescription>Total Revenue</CardDescription>
+          <CardDescription>Envios em Transporte</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            $1,250.00
+            254
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
@@ -28,73 +28,73 @@ export function SectionCards() {
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Trending up this month <IconTrendingUp className="size-4" />
+            Taxa de volumes em transporte <IconTrendingUp className="size-4" />
           </div>
           <div className="text-muted-foreground">
-            Visitors for the last 6 months
+            Dados atualizados em tempo real
           </div>
         </CardFooter>
       </Card>
       <Card className="@container/card bg-[#171717]">
         <CardHeader>
-          <CardDescription>New Customers</CardDescription>
+          <CardDescription>Entregas Realizadas</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            1,234
+            328
+          </CardTitle>
+          <CardAction>
+            <Badge variant="outline">
+              <IconTrendingUp />
+              +90%
+            </Badge>
+          </CardAction>
+        </CardHeader>
+        <CardFooter className="flex-col items-start gap-1.5 text-sm">
+          <div className="line-clamp-1 flex gap-2 font-medium">
+            Taxa de entregas realizadas no prazo <IconTrendingUp className="size-4" />
+          </div>
+          <div className="text-muted-foreground">
+            Dados atualizados em tempo real
+          </div>
+        </CardFooter>
+      </Card>
+      <Card className="@container/card bg-[#171717]">
+        <CardHeader>
+          <CardDescription>Entregas Atrasadas</CardDescription>
+          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
+            125
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingDown />
-              -20%
+              -12.5%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Down 20% this period <IconTrendingDown className="size-4" />
+            Taxa de entregas atrasadas no mês <IconTrendingUp className="size-4" />
           </div>
-          <div className="text-muted-foreground">
-            Acquisition needs attention
-          </div>
+          <div className="text-muted-foreground">Dados atualizados em tempo real</div>
         </CardFooter>
       </Card>
       <Card className="@container/card bg-[#171717]">
         <CardHeader>
-          <CardDescription>Active Accounts</CardDescription>
+          <CardDescription>Economia de Frete</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            45,678
+            18.7%
           </CardTitle>
           <CardAction>
             <Badge variant="outline">
               <IconTrendingUp />
-              +12.5%
+              +18.7%
             </Badge>
           </CardAction>
         </CardHeader>
         <CardFooter className="flex-col items-start gap-1.5 text-sm">
           <div className="line-clamp-1 flex gap-2 font-medium">
-            Strong user retention <IconTrendingUp className="size-4" />
+            Taxa de economia de frete <IconTrendingUp className="size-4" />
           </div>
-          <div className="text-muted-foreground">Engagement exceed targets</div>
-        </CardFooter>
-      </Card>
-      <Card className="@container/card bg-[#171717]">
-        <CardHeader>
-          <CardDescription>Growth Rate</CardDescription>
-          <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            4.5%
-          </CardTitle>
-          <CardAction>
-            <Badge variant="outline">
-              <IconTrendingUp />
-              +4.5%
-            </Badge>
-          </CardAction>
-        </CardHeader>
-        <CardFooter className="flex-col items-start gap-1.5 text-sm">
-          <div className="line-clamp-1 flex gap-2 font-medium">
-            Steady performance increase <IconTrendingUp className="size-4" />
-          </div>
-          <div className="text-muted-foreground">Meets growth projections</div>
+          <div className="text-muted-foreground">Dados atualizados em tempo real</div>
         </CardFooter>
       </Card>
     </div>
