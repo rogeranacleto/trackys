@@ -12,15 +12,25 @@ interface ChildrenProps {
     children: ReactNode
 }
 
-const AuthContext = createContext({} as AuthProps)
+export const AuthContext = createContext({} as AuthProps)
 
 const AuthProvider = ({children}: ChildrenProps) => {
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [senha, setSenha] = useState("");
+
+const login = () => {
+    //aqui a lógica de login no sistema
+}
+
+const logout = () => {
+    //aqui a lógica de logout do sistema
+}
     return(
         <AuthContext.Provider value={{name, email, senha}}>
             {children}
         </AuthContext.Provider>
     )
 }
+
+export { AuthProvider }
