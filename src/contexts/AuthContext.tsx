@@ -18,9 +18,15 @@ const AuthProvider = ({children}: ChildrenProps) => {
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [senha, setSenha] = useState("");
+const [loginAuth, setLoginAuth] = useState(false)
 
+useEffect(() => {
+    const auth = localStorage.getItem("auth") === "true";
+    setLoginAuth(auth)
+
+},[])
 const login = () => {
-    //aqui a lógica de login no sistema
+    
 }
 
 const logout = () => {
