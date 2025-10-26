@@ -3,9 +3,11 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 interface AuthProps {
-    name: string;
-    email: string
-    senha: string
+    userLoginDetail: {};
+    loginAuth: boolean;
+    loading: boolean;
+    login: (details: {}) => void;
+    logout: () => void;
 }
 
 interface ChildrenProps {
@@ -15,25 +17,25 @@ interface ChildrenProps {
 export const AuthContext = createContext({} as AuthProps)
 
 const AuthProvider = ({children}: ChildrenProps) => {
-const [name, setName] = useState("");
-const [email, setEmail] = useState("");
-const [senha, setSenha] = useState("");
-const [loginAuth, setLoginAuth] = useState(false)
+const [userLoginDetail, setUserLoginDetail] = useState({});
+const [loginAuth, setLoginAuth] = useState(false);
+const [loading, setLoading] = useState(true);
 
 useEffect(() => {
     const auth = localStorage.getItem("auth") === "true";
     setLoginAuth(auth)
 
 },[])
-const login = () => {
-    
+const login = (details: {}) => {
+    localStorage.setItem("auth", "true")
+    setLoginAuth(true)
 }
 
 const logout = () => {
-    //aqui a lógica de logout do sistema
+    
 }
     return(
-        <AuthContext.Provider value={{name, email, senha}}>
+        <AuthContext.Provider value={{userLoginDetail, loginAuth, loading, login, logout}}>
             {children}
         </AuthContext.Provider>
     )
