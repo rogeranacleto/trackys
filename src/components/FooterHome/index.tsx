@@ -24,7 +24,7 @@ return () => {
 
                 <div className="relative z-10 p-5">
                     <h2 data-aos="fade-up" data-aos-duration="2400" className="text-4xl font-medium mb-4 text-[#ffffffcb] leading-15">
-                    Sabe o que é ainda mais legal? A plataforma é<br />
+                    E sabe o que é ainda mais legal? <br />Nossa plataforma é
                     totalmente <span className="text-[#dedede]">grátis!</span>
                     </h2>
                     <p data-aos="fade-up" data-aos-duration="2300" className="text-gray-400 mb-8 text-lg">
