@@ -24,12 +24,17 @@ import toast from "react-hot-toast"
 export function LoginForm({className, ...props}: React.ComponentProps<"div">) {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
+const [loginDetail, setLoginDetail] = useState({});
 const navigate = useNavigate();
 
 async function loginUser(e: FormEvent){
   e.preventDefault();
-  try{
     await signInWithEmailAndPassword(auth, email, password)
+    .then((value) => {
+      setLoginDetail({
+        uid: value.user.uid,
+        email: value.user.email
+      })
     toast.success(
       <div>
         <h2 className="text-white font-bold text-sm">Login efetuado</h2>
@@ -37,31 +42,17 @@ async function loginUser(e: FormEvent){
       </div>
     );
     navigate("/admin/dashboard")
-  }catch (error: any) {
-    if (error.code === "auth/weak-password") {
+    })
+    .catch(() => {
       toast.error(
       <div>
-        <h2 className="text-[#dedede] font-bold text-sm">Senha Fraca</h2>
-        <p className="text-gray-100/60 text-sm">Precisa ter no mínimo 6 caracteres.</p>
+        <h2 className="text-[#dedede] font-bold text-sm">Erro no Login</h2>
+        <p className="text-gray-100/60 text-sm">Ocorreu um erro nas credenciais ao tentar fazer login.</p>
       </div>
     );
-    } else if (error.code === "auth/email-already-in-use") {
-        toast.error(
-        <div>
-          <h2 className="text-[#dedede] font-bold text-sm">Email Existente</h2>
-          <p className="text-gray-100/60 text-sm">Esse email já está em uso.</p>
-        </div>
-    );
-    } else {
-        toast.error(
-        <div>
-          <h2 className="text-[#dedede] font-bold text-sm">Erro</h2>
-          <p className="text-gray-100/60 text-sm">Ocorreu um erro inesperado.</p>
-        </div>
-    );
-    }
+    })
   }
-}
+
 
   return (
     <div className={cn("flex flex-col gap-6 dark", className)} {...props}>
