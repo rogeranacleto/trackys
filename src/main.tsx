@@ -5,7 +5,7 @@ import './index.css'
 import { route } from './App'
 import { RouterProvider } from 'react-router'
 import { Toaster } from 'react-hot-toast';
-
+import { AuthProvider } from './contexts/AuthContext'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -39,6 +39,8 @@ createRoot(document.getElementById('root')!).render(
         },
       }}
     />
-    <RouterProvider router={route}></RouterProvider>
+    <AuthProvider>
+      <RouterProvider router={route}></RouterProvider>
+    </AuthProvider>
   </StrictMode>,
 )

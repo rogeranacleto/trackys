@@ -24,10 +24,12 @@ const [loading, setLoading] = useState(true);
 useEffect(() => {
     const auth = localStorage.getItem("auth") === "true";
     setLoginAuth(auth)
+    setLoading(false)
 
 },[])
 const login = (details: {}) => {
     localStorage.setItem("auth", "true")
+    setUserLoginDetail(details)
     setLoginAuth(true)
 }
 

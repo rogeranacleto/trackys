@@ -20,11 +20,14 @@ import {
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 import toast from "react-hot-toast"
+import { useContext } from "react"
+import { AuthContext } from "@/contexts/AuthContext"
 
 export function LoginForm({className, ...props}: React.ComponentProps<"div">) {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [loginDetail, setLoginDetail] = useState({});
+const { login } = useContext(AuthContext);
 const navigate = useNavigate();
 
 async function loginUser(e: FormEvent){
@@ -41,6 +44,7 @@ async function loginUser(e: FormEvent){
         <p className="text-gray-100/60 text-sm">O login foi efetuado com sucesso.</p>
       </div>
     );
+    login(loginDetail)
     navigate("/admin/dashboard")
     })
     .catch(() => {

@@ -10,6 +10,7 @@ import { Entregas } from "./pages/Admin/Entregas";
 import { Envios } from "./pages/Admin/Envios";
 import { Indicadores } from "./pages/Admin/Indicadores";
 import { Ocorrencias } from "./pages/Admin/Ocorrencias";
+import { PrivateRoute } from "./components/PrivateRoute";
 
 const route = createBrowserRouter([
   {
@@ -25,32 +26,37 @@ const route = createBrowserRouter([
     path:"/signup"
   },
   {
-    element: <Layout/>,
+    element: <PrivateRoute/>,
     children:[
-      {
-        element: <Dashboard/>,
-        path: "/admin/dashboard"
+        {
+        element: <Layout/>,
+        children:[
+          {
+            element: <Dashboard/>,
+            path: "/admin/dashboard"
+          },
+          {
+            element: <Cotacoes/>,
+            path: "/admin/cotacoes"
+          },
+          {
+            element: <Envios/>,
+            path: "/admin/envios"
+          },
+          {
+            element: <Entregas/>,
+            path: "/admin/entregas"
+          },
+          {
+            element: <Indicadores/>,
+            path: "/admin/indicadores"
+          },
+          {
+            element: <Ocorrencias/>,
+            path: "/admin/ocorrencias"
+          }
+        ]
       },
-      {
-        element: <Cotacoes/>,
-        path: "/admin/cotacoes"
-      },
-      {
-        element: <Envios/>,
-        path: "/admin/envios"
-      },
-      {
-        element: <Entregas/>,
-        path: "/admin/entregas"
-      },
-      {
-        element: <Indicadores/>,
-        path: "/admin/indicadores"
-      },
-      {
-        element: <Ocorrencias/>,
-        path: "/admin/ocorrencias"
-      }
     ]
   },
   {
