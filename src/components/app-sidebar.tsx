@@ -1,5 +1,6 @@
 "use client"
 import * as React from "react"
+import logo from "../../src/assets/logo-trackys-2.png"
 import {
   IconCamera,
   IconChartBar,
@@ -154,10 +155,10 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <SidebarMenuButton
               asChild
-              className="data-[slot=sidebar-menu-button]:!p-1.5"
+              className="data-[slot=sidebar-menu-button]:!p-1.5 hover:bg-transparent hover:text-[#fff]"
             >
               <a href="#">
-                <IconInnerShadowTop className="!size-5" />
+                <img src={logo} alt="Logo Trackys" className="w-5"/>
                 <span className="text-base font-semibold">Trackys</span>
               </a>
             </SidebarMenuButton>
