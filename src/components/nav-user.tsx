@@ -27,6 +27,9 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 
+import { AuthContext } from "@/contexts/AuthContext";
+import { useContext } from "react";
+
 export function NavUser({
   user,
 }: {
@@ -36,8 +39,11 @@ export function NavUser({
     avatar: string
   }
 }) {
-  const { isMobile } = useSidebar()
-
+const { isMobile } = useSidebar()
+const { logout } = useContext(AuthContext);
+const callLogout = () => {
+  logout()
+}
   return (
     <SidebarMenu>
       <SidebarMenuItem>
@@ -92,7 +98,7 @@ export function NavUser({
               </DropdownMenuItem>
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>
+            <DropdownMenuItem onClick={() => callLogout()}>
               <IconLogout />
               Sair
             </DropdownMenuItem>

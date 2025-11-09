@@ -11,7 +11,7 @@ interface AuthProps {
 }
 
 interface ChildrenProps {
-    children: ReactNode
+    children: ReactNode;
 }
 
 export const AuthContext = createContext({} as AuthProps)
@@ -34,7 +34,8 @@ const login = (details: {}) => {
 }
 
 const logout = () => {
-    
+    setUserLoginDetail({});
+    setLoginAuth(false);
 }
     return(
         <AuthContext.Provider value={{userLoginDetail, loginAuth, loading, login, logout}}>
