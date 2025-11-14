@@ -15,8 +15,8 @@ export function Cotacoes(){
                 <div className="mr-8 ml-8 mb-8 mt-8">
                     <div className="w-full border border-solid border-[#333333] h-50 rounded-sm flex justify-between items-center p-15">
                         <div>
-                            <h1 className="text-[#fff] text-3xl">Adicionar Nova Cotação</h1>
-                            <p className="text-[#a39d9d] mt-2.5">Adicione cotações para escolher uma transportadora para seus envios.</p>
+                            <h1 className="text-[#fff] text-3xl">Adicionar Novo Registro de Cotação</h1>
+                            <p className="text-[#a39d9d] mt-2.5">Adicione um novo registro de cotação e escolha uma transportadora para o envio.</p>
                         </div>
                         <div>
                             <button className="border border-solid border-[#333333] p-3.5 rounded-full flex items-center justify-center cursor-pointer">
@@ -40,30 +40,6 @@ export function Cotacoes(){
                             </thead>
                             <tbody>
                                   <tr className="border-b">
-                                    <td className="px-6 py-6 pl-10">Expresso RogerDev</td>
-                                    <td className="px-6 py-6 pl-10">R$145,00</td>
-                                    <td className="px-6 py-6 pl-10">31/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">30/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">78674</td>
-                                    <td className="px-6 py-6 pl-10"><div className="border border-solid border-[#333333] w-20 text-sm flex items-center justify-center rounded-sm">Ativo</div></td>
-                                </tr>
-                                  <tr className="border-b">
-                                    <td className="px-6 py-6 pl-10">Expresso RogerDev</td>
-                                    <td className="px-6 py-6 pl-10">R$145,00</td>
-                                    <td className="px-6 py-6 pl-10">31/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">30/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">78674</td>
-                                    <td className="px-6 py-6 pl-10"><div className="border border-solid border-[#333333] w-20 text-sm flex items-center justify-center rounded-sm">Ativo</div></td>
-                                </tr>
-                                  <tr className="border-b">
-                                    <td className="px-6 py-6 pl-10">Expresso RogerDev</td>
-                                    <td className="px-6 py-6 pl-10">R$145,00</td>
-                                    <td className="px-6 py-6 pl-10">31/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">30/08/2026</td>
-                                    <td className="px-6 py-6 pl-10">78674</td>
-                                    <td className="px-6 py-6 pl-10"><div className="border border-solid border-[#333333] w-20 text-sm flex items-center justify-center rounded-sm">Ativo</div></td>
-                                </tr>
-                                  <tr>
                                     <td className="px-6 py-6 pl-10">Expresso RogerDev</td>
                                     <td className="px-6 py-6 pl-10">R$145,00</td>
                                     <td className="px-6 py-6 pl-10">31/08/2026</td>
