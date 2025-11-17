@@ -53,7 +53,7 @@ const data = {
       icon: IconChartBar,
     },
     {
-      title: "Entregas",
+      title: "Ranking",
       url: "#",
       icon: IconFolder,
     },
